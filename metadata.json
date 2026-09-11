@@ -1,0 +1,6 @@
+{
+  "name": "AR USDZ Exporter",
+  "description": "Blender 3D AR Exporter platform with web 3D preview, Google Sheets CRM & token generator, Pix payment checkout, and AR Quick Look.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

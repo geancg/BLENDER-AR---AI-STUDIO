@@ -1,0 +1,23 @@
+name = "ar-exporter"
+main = "src/index.js"
+compatibility_date = "2024-09-02"
+
+# R2 — armazenamento dos arquivos USDZ
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "ar-exporter-files"
+
+# D1 — banco de dados (arquivos, scans, tokens Pro)
+[[d1_databases]]
+binding     = "DB"
+database_name = "ar-exporter-db"
+database_id   = "940fe982-14ff-4ae1-866f-17473ccdeb9e"
+
+# Limpeza diária de arquivos expirados (2h da manhã UTC)
+[triggers]
+crons = ["0 2 * * *"]
+
+# Variáveis de ambiente
+[vars]
+# ADMIN_SECRET é definido como secret (nunca no código):
+#   wrangler secret put ADMIN_SECRET
